@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+group 'ch.gibb'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.google.code.gson:gson:2.8.9'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+javafx {
+    version = "11"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+mainClassName = "client.Main"
